@@ -1,0 +1,12 @@
+---
+name: fake-cloud-foundry
+
+templates:
+  bpm-start.erb: bin/bpm-start
+  bpm.yml.erb: config/bpm.yml
+  config.yml.erb: config/config.yml
+
+packages:
+  - fake-cloud-foundry
+
+properties: {}

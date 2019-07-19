@@ -1,8 +1,0 @@
----
-name: bosh-dns-handler
-
-dependencies:
-- go
-
-files:
-- bosh-dns-handler/**/*

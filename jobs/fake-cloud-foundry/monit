@@ -1,0 +1,5 @@
+check process fake-cloud-foundry
+  with pidfile /var/vcap/sys/run/bpm/fake-cloud-foundry/fake-cloud-foundry.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start fake-cloud-foundry"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop fake-cloud-foundry"
+  group vcap

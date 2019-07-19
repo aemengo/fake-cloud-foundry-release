@@ -1,1 +1,1 @@
-# bosh-dns-handler-release
+# fake-cloud-foundry-release

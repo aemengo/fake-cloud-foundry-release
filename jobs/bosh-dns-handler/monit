@@ -1,5 +1,0 @@
-check process bosh-dns-handler
-  with pidfile /var/vcap/sys/run/bpm/bosh-dns-handler/bosh-dns-handler.pid
-  start program "/var/vcap/jobs/bpm/bin/bpm start bosh-dns-handler"
-  stop program "/var/vcap/jobs/bpm/bin/bpm stop bosh-dns-handler"
-  group vcap

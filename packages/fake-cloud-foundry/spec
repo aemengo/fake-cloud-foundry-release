@@ -1,0 +1,8 @@
+---
+name: fake-cloud-foundry
+
+dependencies:
+- go
+
+files:
+- fake-cloud-foundry/**/*

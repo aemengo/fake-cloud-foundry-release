@@ -1,6 +1,6 @@
 ---
-name: bosh-dns-handler
+name: fake-cloud-foundry
 blobstore:
   provider: local
   options:
-    blobstore_path: /tmp/bosh-dns-handler-blobs
+    blobstore_path: /tmp/fake-cloud-foundry-blobs

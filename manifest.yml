@@ -1,8 +1,8 @@
 ---
-name: bosh-dns-handler
+name: fake-cloud-foundry
 
 releases:
-- name: bosh-dns-handler
+- name: fake-cloud-foundry
   version: latest
 - name: "bpm"
   version: "1.1.0"
@@ -18,7 +18,7 @@ instance_groups:
 - azs:
   - z1
   instances: 1
-  name: bosh-dns-handler
+  name: fake-cloud-foundry
   networks:
   - name: default
   stemcell: default
@@ -26,9 +26,15 @@ instance_groups:
   jobs:
   - name: bpm
     release: bpm
-  - name: bosh-dns-handler
-    release: bosh-dns-handler
-
+  - name: fake-cloud-foundry
+    release: fake-cloud-foundry
+    properties:
+      domain: banana.com.
+      aliases:
+        - domain: anthony.banana.com.
+          address: 10.0.0.1
+        - domain: mary.banana.com.
+          address: 10.0.0.2
 
 update:
   canaries: 1
