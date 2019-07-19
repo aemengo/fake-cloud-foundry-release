@@ -1,0 +1,6 @@
+---
+name: bosh-dns-handler
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/bosh-dns-handler-blobs

@@ -1,0 +1,16 @@
+---
+name: bosh-dns-handler
+
+templates:
+  bpm-start.erb: bin/bpm-start
+  bpm.yml.erb: config/bpm.yml
+  config.yml.erb: config/config.yml
+  handlers.json.erb: dns/handlers.json
+
+packages:
+  - bosh-dns-handler
+
+properties:
+  port:
+    description: "Listen port for the DNS handler"
+    default: 1053

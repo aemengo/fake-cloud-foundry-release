@@ -1,0 +1,38 @@
+---
+name: bosh-dns-handler
+
+releases:
+- name: bosh-dns-handler
+  version: latest
+- name: "bpm"
+  version: "1.1.0"
+  url: "https://bosh.io/d/github.com/cloudfoundry/bpm-release?v=1.1.0"
+  sha1: "82e83a5e8ebd6e07f6ca0765e94eb69e03324a19"
+
+stemcells:
+- alias: default
+  os: ubuntu-xenial
+  version: 250.9
+
+instance_groups:
+- azs:
+  - z1
+  instances: 1
+  name: bosh-dns-handler
+  networks:
+  - name: default
+  stemcell: default
+  vm_type: minimal
+  jobs:
+  - name: bpm
+    release: bpm
+  - name: bosh-dns-handler
+    release: bosh-dns-handler
+
+
+update:
+  canaries: 1
+  canary_watch_time: 30000-1200000
+  max_in_flight: 1
+  serial: false
+  update_watch_time: 5000-1200000
