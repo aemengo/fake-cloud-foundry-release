@@ -1,0 +1,3517 @@
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/info HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 541
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:48 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: e35a6e7d-6311-4b5b-6d3f-152980ded0d8::5ab042bf-c902-497f-aba4-1851eeab9d12
+{
+  "api_version": "2.133.0",
+  "app_ssh_endpoint": "ssh.dev.cfdev.sh:2222",
+  "app_ssh_host_key_fingerprint": "96:4d:89:2d:39:18:bc:16:e1:d3:d8:44:f8:16:af:85",
+  "app_ssh_oauth_client": "ssh-proxy",
+  "authorization_endpoint": "https://login.dev.cfdev.sh",
+  "build": "",
+  "description": "",
+  "doppler_logging_endpoint": "wss://doppler.dev.cfdev.sh:443",
+  "min_cli_version": null,
+  "min_recommended_cli_version": null,
+  "name": "",
+  "osbapi_version": "2.14",
+  "routing_endpoint": "https://api.dev.cfdev.sh/routing",
+  "support": "",
+  "token_endpoint": "https://uaa.dev.cfdev.sh",
+  "version": 0
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /login HTTP/1.1
+Host: login.dev.cfdev.sh
+Accept: application/json
+Connection: close
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Cache-Control: no-store
+Content-Language: en-US
+Content-Length: 380
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Set-Cookie: X-Uaa-Csrf=ar6h3iSqpCfoTInipjSE7Z; Max-Age=86400; Expires=Tue, 23-Jul-2019 08:22:49 GMT; Path=/; Secure; HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: fc59612d-7da5-4b29-76e1-9343fe546838
+X-Xss-Protection: 1; mode=block
+{
+  "app": {
+    "version": "4.31.0-SNAPSHOT"
+  },
+  "commit_id": "2e27fa7",
+  "entityID": "login.dev.cfdev.sh",
+  "idpDefinitions": {},
+  "links": {
+    "login": "https://login.dev.cfdev.sh",
+    "passwd": "/forgot_password",
+    "register": "/create_account",
+    "uaa": "https://uaa.dev.cfdev.sh"
+  },
+  "prompts": {
+    "password": "[PRIVATE DATA HIDDEN]",
+    "username": [
+      "text",
+      "Email"
+    ]
+  },
+  "timestamp": "2019-03-15T19:54:53+0000",
+  "zone_name": "uaa"
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET / HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1002
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: de0b2b3e-5850-4c5a-6a8c-436cc0e5e69f::33f3f8f5-1dd7-4038-a13c-f3938e09db53
+{
+  "links": {
+    "app_ssh": {
+      "href": "ssh.dev.cfdev.sh:2222",
+      "meta": {
+        "host_key_fingerprint": "96:4d:89:2d:39:18:bc:16:e1:d3:d8:44:f8:16:af:85",
+        "oauth_client": "ssh-proxy"
+      }
+    },
+    "bits_service": null,
+    "cloud_controller_v2": {
+      "href": "https://api.dev.cfdev.sh/v2",
+      "meta": {
+        "version": "2.133.0"
+      }
+    },
+    "cloud_controller_v3": {
+      "href": "https://api.dev.cfdev.sh/v3",
+      "meta": {
+        "version": "3.68.0"
+      }
+    },
+    "credhub": null,
+    "logging": {
+      "href": "wss://doppler.dev.cfdev.sh:443"
+    },
+    "network_policy_v0": {
+      "href": "https://api.dev.cfdev.sh/networking/v0/external"
+    },
+    "network_policy_v1": {
+      "href": "https://api.dev.cfdev.sh/networking/v1/external"
+    },
+    "routing": {
+      "href": "https://api.dev.cfdev.sh/routing"
+    },
+    "self": {
+      "href": "https://api.dev.cfdev.sh"
+    },
+    "uaa": {
+      "href": "https://uaa.dev.cfdev.sh"
+    }
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v3 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1498
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.005893
+X-Vcap-Request-Id: d52e816c-d066-4186-72c9-135e59b485c9::73a1166a-563e-4d54-9e88-e7dd5429d50b
+X-Xss-Protection: 1; mode=block
+{
+  "links": {
+    "apps": {
+      "href": "https://api.dev.cfdev.sh/v3/apps"
+    },
+    "buildpacks": {
+      "experimental": true,
+      "href": "https://api.dev.cfdev.sh/v3/buildpacks"
+    },
+    "builds": {
+      "href": "https://api.dev.cfdev.sh/v3/builds"
+    },
+    "deployments": {
+      "experimental": true,
+      "href": "https://api.dev.cfdev.sh/v3/deployments"
+    },
+    "domains": {
+      "experimental": true,
+      "href": "https://api.dev.cfdev.sh/v3/domains"
+    },
+    "droplets": {
+      "href": "https://api.dev.cfdev.sh/v3/droplets"
+    },
+    "feature_flags": {
+      "href": "https://api.dev.cfdev.sh/v3/feature_flags"
+    },
+    "isolation_segments": {
+      "href": "https://api.dev.cfdev.sh/v3/isolation_segments"
+    },
+    "organizations": {
+      "href": "https://api.dev.cfdev.sh/v3/organizations"
+    },
+    "packages": {
+      "href": "https://api.dev.cfdev.sh/v3/packages"
+    },
+    "processes": {
+      "href": "https://api.dev.cfdev.sh/v3/processes"
+    },
+    "resource_match": {
+      "experimental": true,
+      "href": "https://api.dev.cfdev.sh/v3/resource_match"
+    },
+    "self": {
+      "href": "https://api.dev.cfdev.sh/v3"
+    },
+    "service_instances": {
+      "href": "https://api.dev.cfdev.sh/v3/service_instances"
+    },
+    "spaces": {
+      "href": "https://api.dev.cfdev.sh/v3/spaces"
+    },
+    "stacks": {
+      "href": "https://api.dev.cfdev.sh/v3/stacks"
+    },
+    "tasks": {
+      "href": "https://api.dev.cfdev.sh/v3/tasks"
+    }
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /login HTTP/1.1
+Host: uaa.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Cache-Control: no-store
+Content-Language: en-US
+Content-Length: 380
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Set-Cookie: X-Uaa-Csrf=MjFMrRyvBNwnL6JK4EvLgl; Max-Age=86400; Expires=Tue, 23-Jul-2019 08:22:49 GMT; Path=/; Secure; HttpOnly
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: b9a12486-68ce-409c-7f79-e12acc96a848
+X-Xss-Protection: 1; mode=block
+{
+  "app": {
+    "version": "4.31.0-SNAPSHOT"
+  },
+  "commit_id": "2e27fa7",
+  "entityID": "login.dev.cfdev.sh",
+  "idpDefinitions": {},
+  "links": {
+    "login": "https://login.dev.cfdev.sh",
+    "passwd": "/forgot_password",
+    "register": "/create_account",
+    "uaa": "https://uaa.dev.cfdev.sh"
+  },
+  "prompts": {
+    "password": "[PRIVATE DATA HIDDEN]",
+    "username": [
+      "text",
+      "Email"
+    ]
+  },
+  "timestamp": "2019-03-15T19:54:53+0000",
+  "zone_name": "uaa"
+}
+
+
+Pushing app dora to org cfdev-org / space cfdev-space as admin...
+Getting app info...
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/apps?q=name%3Adora&q=space_guid%3A2f732a38-8035-4696-a243-c52368c2b190 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 72a96cbc-309e-452b-767f-4873f175e0ff::1e334e32-05db-49b3-be25-10d1886515e8
+{
+  "next_url": null,
+  "prev_url": null,
+  "resources": null,
+  "total_pages": 1,
+  "total_results": 0
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/shared_domains HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 522
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 9e224265-31e5-43d7-7ba9-808d309e4d80::fdd2e630-aef9-4908-8574-236ce94dcca4
+{
+  "next_url": null,
+  "prev_url": null,
+  "resources": [
+    {
+      "entity": {
+        "internal": false,
+        "name": "dev.cfdev.sh",
+        "router_group_guid": null,
+        "router_group_type": null
+      },
+      "metadata": {
+        "created_at": "2019-07-22T01:55:53Z",
+        "guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+        "updated_at": "2019-07-22T01:55:53Z",
+        "url": "/v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1"
+      }
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/organizations/157b05e0-d2a9-47f1-9794-cbbb6c8ae484/private_domains HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 63d6db5f-5a02-49ef-4d32-c8ade3c1730e::a27c3334-5683-4dd4-978a-736f0980d639
+{
+  "next_url": null,
+  "prev_url": null,
+  "resources": null,
+  "total_pages": 1,
+  "total_results": 0
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/routes?q=domain_guid%3Ae737e4af-3c9d-4aa5-b692-acc3c5fd81e1&q=host%3Adora&q=path%3A HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 200 OK
+Content-Length: 107
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: da3b2db7-3a0b-4e0e-746c-e92c3a3ba7dd::235e204c-824d-49c5-8ac7-2e1f242db468
+{
+  "next_url": null,
+  "prev_url": null,
+  "resources": null,
+  "total_pages": 1,
+  "total_results": 0
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+GET /v2/routes/reserved/domain/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1?host=dora HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 404 Not Found
+Content-Length: 86
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 95fe8762-476d-4a53-7c95-aeada5f53d37::7292cfb1-13b8-42b3-ae59-29cf370cde1c
+{
+  "code": 10000,
+  "description": "Unknown request",
+  "error_code": "CF-NotFound"
+}
+
+
+Creating app with these attributes...
++ name:       dora
+  path:       /Users/aemengo/workspace/cf-acceptance-tests/assets/dora
+  routes:
++   dora.dev.cfdev.sh
+
+Creating app dora...
+REQUEST: [2019-07-24T22:51:40-04:00]
+POST /v2/apps HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+{
+  "name": "dora",
+  "space_guid": "2f732a38-8035-4696-a243-c52368c2b190"
+}
+
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 201 Created
+Content-Length: 1688
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Location: /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 1174e520-2189-4bb4-4ebe-43eebf749e63::f75e740f-3ff3-45c1-93f3-7033754a7e5a
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": null,
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": null,
+    "state": "STOPPED",
+    "version": "33b40d4a-6475-4753-8235-844a750ea33c"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:49Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+Mapping routes...
+REQUEST: [2019-07-24T22:51:40-04:00]
+POST /v2/routes HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+{
+  "domain_guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+  "host": "dora",
+  "port": null,
+  "space_guid": "2f732a38-8035-4696-a243-c52368c2b190"
+}
+
+
+RESPONSE: [2019-07-24T22:51:40-04:00]
+HTTP/1.1 201 Created
+Content-Length: 753
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Location: /v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: adc85409-e43b-4f4a-4513-1661b166bd8e::c7d49a60-f10f-47bd-9abc-c4402dad4c7b
+{
+  "entity": {
+    "apps_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/apps",
+    "domain_guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+    "domain_url": "/v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+    "host": "dora",
+    "path": "",
+    "port": null,
+    "route_mappings_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/route_mappings",
+    "service_instance_guid": null,
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "25c7141c-414a-4abf-b7b3-991fe28350a4",
+    "updated_at": "2019-07-22T08:22:49Z",
+    "url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:40-04:00]
+PUT /v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:41-04:00]
+HTTP/1.1 201 Created
+Content-Length: 753
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:49 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 87555895-f959-46f3-6733-953099aaab1d::aa8afaa5-50a2-4edd-9f77-a8a354b21581
+{
+  "entity": {
+    "apps_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/apps",
+    "domain_guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+    "domain_url": "/v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+    "host": "dora",
+    "path": "",
+    "port": null,
+    "route_mappings_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/route_mappings",
+    "service_instance_guid": null,
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "25c7141c-414a-4abf-b7b3-991fe28350a4",
+    "updated_at": "2019-07-22T08:22:49Z",
+    "url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4"
+  }
+}
+
+
+Comparing local files to remote cache...
+REQUEST: [2019-07-24T22:51:41-04:00]
+PUT /v2/resource_match HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+[
+  {
+    "fn": ".rspec",
+    "mode": "644",
+    "sha1": "9a2db04d99044ea5cb1c5ce13f23475cfc9c8a92",
+    "size": 20
+  },
+  {
+    "fn": "Gemfile",
+    "mode": "644",
+    "sha1": "478b91e0a812f365266573cc8ff59b25ec225e48",
+    "size": 121
+  },
+  {
+    "fn": "Gemfile.lock",
+    "mode": "644",
+    "sha1": "bba20236988075a0d767c353fdc18aa0f6875376",
+    "size": 807
+  },
+  {
+    "fn": "Procfile",
+    "mode": "644",
+    "sha1": "47395b01a32822be09479ea0d1832723d6f9e146",
+    "size": 80
+  },
+  {
+    "fn": "README.md",
+    "mode": "644",
+    "sha1": "a223185e935f56822a85f1efe684bcafcf6207e9",
+    "size": 3028
+  },
+  {
+    "fn": "config.ru",
+    "mode": "644",
+    "sha1": "7848c85368d95451290f1f4350fa36431c6b1753",
+    "size": 66
+  },
+  {
+    "fn": "curl.rb",
+    "mode": "644",
+    "sha1": "fdc3bdf8c60d8170835e67526cd4216234a4a7da",
+    "size": 288
+  },
+  {
+    "fn": "dora.rb",
+    "mode": "644",
+    "sha1": "7b01033349a9e1075fa92091da82513d331d0336",
+    "size": 2407
+  },
+  {
+    "fn": "get_instance_cookie_jars.sh",
+    "mode": "755",
+    "sha1": "b265ed1b32a436a7f78bb21c93b6eb63ec8d2e6e",
+    "size": 1258
+  },
+  {
+    "fn": "instances.rb",
+    "mode": "644",
+    "sha1": "2c4455d8d7aa170b068e14cac45fe8acba656fc3",
+    "size": 205
+  },
+  {
+    "fn": "log_utils.rb",
+    "mode": "644",
+    "sha1": "abb9726ab0673d748915f10df56dec2411eb04bf",
+    "size": 1453
+  },
+  {
+    "fn": "logging_service.rb",
+    "mode": "644",
+    "sha1": "27de1bcfba1a726797b3a41ceb042715f12a57f9",
+    "size": 853
+  },
+  {
+    "fn": "scripts/README.md",
+    "mode": "644",
+    "sha1": "37df019e71f5fdca2fd6265cce051449a35c7344",
+    "size": 1505
+  },
+  {
+    "fn": "scripts/clean up map script",
+    "mode": "644",
+    "sha1": "ac7b98715427e8643ba96cac6d274780ff17fab3",
+    "size": 1357
+  },
+  {
+    "fn": "scripts/map_cookie_jars_to_instances.rb",
+    "mode": "755",
+    "sha1": "3eb07af3bac47ad0981d9f2a407d29c9639c1e41",
+    "size": 1134
+  },
+  {
+    "fn": "scripts/run_performance_test_2_deas_multiple_bg.rb",
+    "mode": "755",
+    "sha1": "0e271b977a074eb9b0745ce6be13238c0e1e1b88",
+    "size": 2859
+  },
+  {
+    "fn": "scripts/run_performance_test_single_dea.rb",
+    "mode": "755",
+    "sha1": "5dd08917bca66e564223f526e5f28b4275a549b0",
+    "size": 1092
+  },
+  {
+    "fn": "scripts/run_performance_test_single_dea_multiple bg.rb",
+    "mode": "755",
+    "sha1": "0235c35a11ea464f01c19b4e8f032c8e5ea2cc03",
+    "size": 1855
+  },
+  {
+    "fn": "scripts/scale_dora",
+    "mode": "755",
+    "sha1": "334d0cad73938d69d3f0dde7af9318cefa8305f8",
+    "size": 541
+  },
+  {
+    "fn": "spec/curl_spec.rb",
+    "mode": "644",
+    "sha1": "818d84cad65cae39d593d76b1295d71a7520226a",
+    "size": 1211
+  },
+  {
+    "fn": "spec/instances_spec.rb",
+    "mode": "644",
+    "sha1": "0feae2dbcad72d6e711faa0958141b3d30962d70",
+    "size": 614
+  },
+  {
+    "fn": "spec/logging_service_spec.rb",
+    "mode": "644",
+    "sha1": "45d4491e94c321201b524df9d8c5dc8303a77515",
+    "size": 1072
+  },
+  {
+    "fn": "spec/logutil_spec.rb",
+    "mode": "644",
+    "sha1": "64bfb7f5e4276a081e6369548e71ac4994caaa7e",
+    "size": 1332
+  },
+  {
+    "fn": "spec/spec_helper.rb",
+    "mode": "644",
+    "sha1": "879fa5919048dc0ca8bf3dc7ba5ebeda20834e03",
+    "size": 1143
+  },
+  {
+    "fn": "spec/stress_testers_spec.rb",
+    "mode": "644",
+    "sha1": "6ad229232480613abb145cf28fd58628e81b7e7c",
+    "size": 3162
+  },
+  {
+    "fn": "stress",
+    "mode": "755",
+    "sha1": "4cc2ce904af08c46989edb01a56cf544a7b53abc",
+    "size": 22864
+  },
+  {
+    "fn": "stress_testers.rb",
+    "mode": "644",
+    "sha1": "2f6094fd3c0a24f1a0804ea00f19f652a0645585",
+    "size": 1073
+  },
+  {
+    "fn": "vendor/cache/diff-lcs-1.3.gem",
+    "mode": "644",
+    "sha1": "8be462a44988891d3f4350085e965cd75dfc9d62",
+    "size": 46080
+  },
+  {
+    "fn": "vendor/cache/json-2.2.0.gem",
+    "mode": "644",
+    "sha1": "90a51dda74cb912bbb4911ef007471e4e852a94a",
+    "size": 112640
+  },
+  {
+    "fn": "vendor/cache/mustermann-1.0.3.gem",
+    "mode": "644",
+    "sha1": "2d090e7d3cd2a35efeaeacf006100fb83b828686",
+    "size": 51712
+  },
+  {
+    "fn": "vendor/cache/rack-2.0.7.gem",
+    "mode": "644",
+    "sha1": "7610f0aea57376b6740767fb01694fda8d463d8f",
+    "size": 254976
+  },
+  {
+    "fn": "vendor/cache/rack-protection-2.0.5.gem",
+    "mode": "644",
+    "sha1": "9d69e9aa930987d7365ec75f3b5b1dae406dc9e6",
+    "size": 16896
+  },
+  {
+    "fn": "vendor/cache/rack-test-1.1.0.gem",
+    "mode": "644",
+    "sha1": "b80bc5ca38a885e747271675ba91dd3d02136bf1",
+    "size": 17920
+  },
+  {
+    "fn": "vendor/cache/rspec-3.8.0.gem",
+    "mode": "644",
+    "sha1": "e2fda5e1dcf9e8a043e80ea31969364ba6ab1a16",
+    "size": 10752
+  },
+  {
+    "fn": "vendor/cache/rspec-core-3.8.0.gem",
+    "mode": "644",
+    "sha1": "9f18a6bbad670a118071189b1b6dfd90a145b42f",
+    "size": 159232
+  },
+  {
+    "fn": "vendor/cache/rspec-expectations-3.8.2.gem",
+    "mode": "644",
+    "sha1": "4a06d80243edebb977a7f04875c6e7d3acbd69a5",
+    "size": 81920
+  },
+  {
+    "fn": "vendor/cache/rspec-mocks-3.8.0.gem",
+    "mode": "644",
+    "sha1": "d28f42a4745a62a13c3c46c2d7b42167a81aabcf",
+    "size": 78336
+  },
+  {
+    "fn": "vendor/cache/rspec-support-3.8.0.gem",
+    "mode": "644",
+    "sha1": "78c73f4ce2b753ea937b16de50e57d18da33c441",
+    "size": 36352
+  },
+  {
+    "fn": "vendor/cache/sinatra-2.0.5.gem",
+    "mode": "644",
+    "sha1": "c16fd081f46c4a600933821bb2d5e15424b9d0df",
+    "size": 364544
+  },
+  {
+    "fn": "vendor/cache/tilt-2.0.9.gem",
+    "mode": "644",
+    "sha1": "55a75a80e29731d072fe44dfaf865479b65c27fd",
+    "size": 55296
+  }
+]
+
+
+RESPONSE: [2019-07-24T22:51:41-04:00]
+HTTP/1.1 200 OK
+Content-Length: 2
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:50 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: c2b29fa1-5966-4a13-5c76-06fff3912b74::11e8e9dd-0ee5-42d1-a19f-e70fdd258d63
+null
+
+
+Packaging files to upload...
+Uploading files...
+ 0 B / 1.21 MiB [---------------------------------------------------------------------------]   0.00%REQUEST: [2019-07-24T22:51:41-04:00]
+PUT /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/bits?async=true HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: multipart/form-data; boundary=1ff73de9c322f8efb6715978e5a1f16de247e87f85fa622947a89906132e
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+[multipart/form-data Content Hidden]
+
+ 1.21 MiB / 1.21 MiB [======================================================================] 100.00%RESPONSE: [2019-07-24T22:51:41-04:00]
+HTTP/1.1 201 Created
+Content-Length: 270
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:50 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: abcdac0c-1f55-4086-76b0-46d1acff5252::aa1213c3-9b83-47c6-adef-33272841c651
+{
+  "entity": {
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "status": "queued"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:50Z",
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "url": "/v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:41-04:00]
+GET /v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:41-04:00]
+HTTP/1.1 200 OK
+Content-Length: 270
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:50 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 3c71258e-9c51-4bc1-7f97-c9396d9ed39e::3d13cd06-7216-4a32-957d-ff79fcb43bfe
+{
+  "entity": {
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "status": "queued"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:50Z",
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "url": "/v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7"
+  }
+}
+
+
+ 1.21 MiB / 1.21 MiB [===================================================================] 100.00% 1s
+
+Waiting for API to complete processing files...
+REQUEST: [2019-07-24T22:51:44-04:00]
+GET /v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:44-04:00]
+HTTP/1.1 200 OK
+Content-Length: 270
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:53 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 1a77b62a-8812-46c8-7046-44dd108870fd::548684ed-90bf-4757-853c-c69fdc3c5d98
+{
+  "entity": {
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "status": "queued"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:50Z",
+    "guid": "290cd88b-6d09-49ae-ac20-144a9c4997b7",
+    "url": "/v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:47-04:00]
+GET /v2/jobs/290cd88b-6d09-49ae-ac20-144a9c4997b7 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:47-04:00]
+HTTP/1.1 200 OK
+Content-Length: 167
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:56 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: d0ca80d5-a13d-44a4-4701-521014b6df40::b7c561b7-89a0-4403-bf85-865088adaf5f
+{
+  "entity": {
+    "guid": "0",
+    "status": "finished"
+  },
+  "metadata": {
+    "created_at": "1970-01-01T00:00:00Z",
+    "guid": "0",
+    "url": "/v2/jobs/0"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:47-04:00]
+POST /oauth/token HTTP/1.1
+Host: login.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+[PRIVATE DATA HIDDEN]
+
+RESPONSE: [2019-07-24T22:51:47-04:00]
+HTTP/1.1 200 OK
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 22 Jul 2019 08:22:56 GMT
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: 7f11cf77-c42d-4c19-6081-78777e5236b1
+X-Xss-Protection: 1; mode=block
+{
+  "access_token": "[PRIVATE DATA HIDDEN]",
+  "expires_in": 599,
+  "id_token": "[PRIVATE DATA HIDDEN]",
+  "jti": "5a44d80ff42c45ec8384821a7466ba30",
+  "refresh_token": "[PRIVATE DATA HIDDEN]",
+  "scope": "clients.read openid routing.router_groups.write scim.read cloud_controller.admin uaa.user routing.router_groups.read cloud_controller.read password.write cloud_controller.write network.admin doppler.firehose scim.write",
+  "token_type": "[PRIVATE DATA HIDDEN]"
+}
+
+
+WEBSOCKET REQUEST: [2019-07-24T22:51:47-04:00]
+GET /apps/a0237768-e35b-4930-9e28-ff181f8d445f/stream HTTP/1.1
+Host: wss://doppler.dev.cfdev.sh:443
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Key: [HIDDEN]
+Origin: wss://doppler.dev.cfdev.sh:443
+Authorization: [PRIVATE DATA HIDDEN]
+
+
+WEBSOCKET RESPONSE: [2019-07-24T22:51:48-04:00]
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-Websocket-Accept: ItIaJEWbzTGd2oVxwWWerS44jkY=
+
+
+
+Staging app and tracing logs...
+REQUEST: [2019-07-24T22:51:48-04:00]
+PUT /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/json
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+{
+  "state": "STARTED"
+}
+
+
+RESPONSE: [2019-07-24T22:51:49-04:00]
+HTTP/1.1 201 Created
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:57 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: cd69092e-8272-4d0b-6149-713aa66cb53e::b2d5ef14-1557-469e-9673-8cba62f557b3
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:51:49-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:49-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:22:58 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 54eee137-58ad-43e9-50a4-afb63d4afe0d::84062ebd-edcf-47c1-a9ac-29050a0c6abe
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Downloading nodejs_buildpack...
+   Downloading ruby_buildpack...
+   Downloading java_buildpack...
+   Downloading r_buildpack...
+   Downloaded java_buildpack (222.2K)
+   Downloading staticfile_buildpack...
+REQUEST: [2019-07-24T22:51:52-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:52-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:01 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: c86fe3bf-1ed5-40be-74b6-f68c0afcec84::cab2594a-9441-46c5-9d7f-c7b970b069e0
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Downloaded ruby_buildpack (4.6M)
+   Downloading dotnet_core_buildpack...
+   Downloaded r_buildpack (4.4M)
+   Downloading php_buildpack...
+   Downloaded staticfile_buildpack (5M)
+   Downloading go_buildpack...
+   Downloaded php_buildpack (300.2K)
+   Downloading python_buildpack...
+   Downloaded nodejs_buildpack (4.6M)
+   Downloading binary_buildpack...
+   Downloaded dotnet_core_buildpack (4.8M)
+   Downloading nginx_buildpack...
+REQUEST: [2019-07-24T22:51:55-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:55-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:04 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 2b225e50-c48d-44a5-520d-34a2070963c3::6cf73f05-c1b1-4229-b4f7-a2738c1420bd
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Downloaded go_buildpack (4.5M)
+   Downloaded python_buildpack (4.5M)
+   Downloaded nginx_buildpack (7.5M)
+   Downloaded binary_buildpack (8.2M)
+   Cell ddf57d79-c4f8-4360-ada2-15c0130f2344 creating container for instance fe914ba3-0893-4ddd-82aa-3491def652b1
+REQUEST: [2019-07-24T22:51:58-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:51:58-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:07 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 6b1cf993-6c19-4f8a-79ee-ab172b906e7e::39f34e6e-b3a5-4baa-8795-42ca621b8bf3
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:01-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:01-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:10 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: fdbdc1ac-987a-41b3-4d5c-a53aedac96a8::bc57c5f5-7683-41b0-bc26-f1e18ed81adf
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:04-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:07-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:16 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: ffb49cf8-406f-4c52-7762-60a67c4c4ef0::77d73680-e448-4164-8e22-0410dd25237e
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:10-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:14-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:23 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 83590115-7348-460a-5504-8dff4e8a01a7::1b3464e6-f4bb-4819-a139-4cf8f7a4a949
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:17-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:17-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:26 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: cacca997-c06e-4f50-7e86-e69cdc16415f::27383321-3d07-48d0-890c-c337d6dbbd04
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:20-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:20-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:29 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: bd99da29-7aef-4e99-4727-8fdb8ca13e8d::f7882806-18ef-4633-9480-cf44da2b6041
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:23-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:32 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: fdce321b-caf9-4723-44d3-8e610e157384::c7010d0d-8058-4b11-81dd-40a497c2b4f8
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:26-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:26-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:35 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 254b3229-558d-4bad-7719-ac786244e610::f921fb61-9909-4b23-ba0b-8624e40593a9
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Cell ddf57d79-c4f8-4360-ada2-15c0130f2344 successfully created container for instance fe914ba3-0893-4ddd-82aa-3491def652b1
+   Downloading app package...
+   Downloaded app package (1.2M)
+REQUEST: [2019-07-24T22:52:29-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:29-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:38 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 28be020d-085c-48d1-7b9d-700a2091d227::a5a09e12-9303-4257-a119-855870d432e2
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   -----> Ruby Buildpack version 1.7.34
+   -----> Supplying Ruby
+   -----> Installing bundler 1.17.3
+          Download [https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-1.17.3-any-stack-b7502506.tgz]
+   -----> Installing bundler 2.0.1
+          Download [https://buildpacks.cloudfoundry.org/dependencies/bundler/bundler-2.0.1-any-stack-fcffef5f.tgz]
+REQUEST: [2019-07-24T22:52:32-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:32-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:41 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: cf16c357-6573-46d1-6780-99498515faf2::eeee6060-9b01-4ea3-8a35-a865d682ab3a
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+          **WARNING** You have not declared a Ruby version in your Gemfile.
+          Defaulting to 2.4.5
+          See http://docs.cloudfoundry.org/buildpacks/ruby/index.html#runtime for more information.
+   -----> Installing ruby 2.4.5
+          Download [https://buildpacks.cloudfoundry.org/dependencies/ruby/ruby-2.4.5-linux-x64-cflinuxfs3-bedb8b6b.tgz]
+REQUEST: [2019-07-24T22:52:35-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:36-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:44 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 8ce51eaf-ff72-4d5c-6bf4-1786c84711eb::5785948f-9fde-4d20-bb7c-dde9e300d4fb
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   -----> Update rubygems from 2.6.14.3 to 3.0.2
+   -----> Installing rubygems 3.0.2
+          Download [https://buildpacks.cloudfoundry.org/dependencies/rubygems/rubygems-3.0.2-any-stack-ad7433a4.tgz]
+REQUEST: [2019-07-24T22:52:39-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:39-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:48 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 82fdcf5f-5b7a-411e-5b27-256f5c301ad0::b965f029-7549-4adf-bc76-8cca4f57431c
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:42-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:42-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:51 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: aa0071af-75ad-4c8a-61d1-d61a2db10989::d5876a75-9634-47c0-9eac-13394e1734c1
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:45-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:48-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:23:57 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 75401112-07a9-4710-7580-2597f035ee01::329c9c9e-2812-42c7-bf90-f7ca8d36670b
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:52:51-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:51-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:00 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 03cbd191-cb97-42f3-48a0-c608e3394241::e785bfc2-1e90-479c-94c9-e394a86c1271
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   -----> Installing dependencies using bundler 2.0.1
+          Running: bundle install --without development:test --jobs=4 --retry=4 --path /tmp/contents136385390/deps/0/vendor_bundle --binstubs /tmp/contents136385390/deps/0/binstubs --deployment
+          Using bundler 2.0.1
+          Installing json 2.2.0 with native extensions
+          Installing mustermann 1.0.3
+          Installing rack 2.0.7
+          Installing tilt 2.0.9
+REQUEST: [2019-07-24T22:52:54-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:54-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:03 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 29586858-153e-4cc7-7eb4-2d54d5e2ec46::0b01a22c-2f4a-454d-af19-66339096c54a
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+          Installing rack-protection 2.0.5
+          Installing sinatra 2.0.5
+REQUEST: [2019-07-24T22:52:57-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:52:57-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:06 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 4741b762-6c59-4d4f-6d9e-563b35d1c90b::f497d8bc-08b4-4ef9-b323-fc038ebd1a07
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+          Bundle complete! 4 Gemfile dependencies, 7 gems now installed.
+          Gems in the groups development and test were not installed.
+          Bundled gems are installed into `/tmp/contents136385390/deps/0/vendor_bundle`
+   -----> Regenerating bundler binstubs...
+          Cleaning up the bundler cache.
+   -----> Creating runtime environment
+   -----> Saving vendor_bundle to cache
+   -----> Finalizing Ruby
+   -----> Copy binaries to app/bin directory
+REQUEST: [2019-07-24T22:53:00-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:00-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:09 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 70da6cdf-c727-4ca7-766e-cfc1dd0e56fc::54fdc10b-db1f-4c69-890b-f9742804dcb2
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:03-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:03-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:12 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: aeb3e84b-efc1-4922-6c22-ebf39cf162b6::90abceee-2fcb-45e1-8ed9-f6f05f4a2e72
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:06-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:06-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:15 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: e9005f05-8c70-4f3c-6fc2-873f3b945336::3e46db5c-e0e1-4804-9a47-d07725e8e60e
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Exit status 0
+   Uploading droplet, build artifacts cache...
+   Uploading droplet...
+   Uploading build artifacts cache...
+   Uploaded build artifacts cache (21.6M)
+REQUEST: [2019-07-24T22:53:09-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:09-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:18 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 886b36f3-0795-4a80-6950-f8c7c7cb5773::f5ad57bb-1cc8-461c-8aff-7b09e1de8b69
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:12-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:13-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1740
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:21 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 10e2b5d4-1cff-4451-5cc6-fc1f56590b4c::c573e417-9034-47d3-9883-a2573723632e
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": null,
+    "detected_buildpack_guid": null,
+    "detected_start_command": "",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "PENDING",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+   Uploaded droplet (23M)
+   Uploading complete
+   Cell ddf57d79-c4f8-4360-ada2-15c0130f2344 stopping instance fe914ba3-0893-4ddd-82aa-3491def652b1
+   Cell ddf57d79-c4f8-4360-ada2-15c0130f2344 destroying container for instance fe914ba3-0893-4ddd-82aa-3491def652b1
+   Cell ddf57d79-c4f8-4360-ada2-15c0130f2344 successfully destroyed container for instance fe914ba3-0893-4ddd-82aa-3491def652b1
+REQUEST: [2019-07-24T22:53:16-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:16-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1812
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:25 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 78b2a5fa-4736-4dd6-53f2-ac8d5b4be7c5::20a03a0c-5aa4-4aa1-952a-d16a37b7d4c1
+{
+  "entity": {
+    "buildpack": null,
+    "command": null,
+    "console": false,
+    "debug": null,
+    "detected_buildpack": "ruby",
+    "detected_buildpack_guid": "87abec4d-5327-41b5-8170-725791ad369f",
+    "detected_start_command": "bundle exec rackup config.ru -p $PORT",
+    "diego": true,
+    "disk_quota": 1024,
+    "docker_credentials": {
+      "password": "[PRIVATE DATA HIDDEN]",
+      "username": null
+    },
+    "docker_image": null,
+    "enable_ssh": true,
+    "environment_json": {},
+    "events_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/events",
+    "health_check_http_endpoint": null,
+    "health_check_timeout": null,
+    "health_check_type": "port",
+    "instances": 1,
+    "memory": 256,
+    "name": "dora",
+    "package_state": "STAGED",
+    "package_updated_at": "2019-07-22T08:22:50Z",
+    "ports": [
+      8080
+    ],
+    "production": false,
+    "route_mappings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings",
+    "routes_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes",
+    "service_bindings_url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/service_bindings",
+    "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+    "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190",
+    "stack_guid": "91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "stack_url": "/v2/stacks/91cff036-4ae6-4f52-b575-3cf5f77889c6",
+    "staging_failed_description": null,
+    "staging_failed_reason": null,
+    "staging_task_id": "fe914ba3-0893-4ddd-82aa-3491def652b1",
+    "state": "STARTED",
+    "version": "b79882f3-9994-41e4-8da0-a3cd345800d9"
+  },
+  "metadata": {
+    "created_at": "2019-07-22T08:22:49Z",
+    "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+    "updated_at": "2019-07-22T08:22:57Z",
+    "url": "/v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:16-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/instances HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+
+Waiting for app to start...
+RESPONSE: [2019-07-24T22:53:16-04:00]
+HTTP/1.1 200 OK
+Content-Length: 56
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:25 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: db8e49ea-e676-4b79-63a8-f6d4d8953d0d::f54a9540-3919-43b0-a967-9b74675f6957
+{
+  "0": {
+    "since": 1563783863,
+    "state": "STARTING",
+    "uptime": 1
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:19-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/instances HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:19-04:00]
+HTTP/1.1 200 OK
+Content-Length: 56
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:28 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 19a802d2-8e28-4aa3-7d52-727b890a4b2d::1f108935-c433-42f2-aa64-9c61f8b08e34
+{
+  "0": {
+    "since": 1563783863,
+    "state": "STARTING",
+    "uptime": 5
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/instances HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:22-04:00]
+HTTP/1.1 200 OK
+Content-Length: 55
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 17f28d6d-3756-4517-7606-3a34fd9eff4e::c0a7c9c8-b54b-4ec6-875d-c1b03a2d7fcd
+{
+  "0": {
+    "since": 1563783870,
+    "state": "RUNNING",
+    "uptime": 0
+  }
+}
+
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v3/apps?names=dora&space_guids=2f732a38-8035-4696-a243-c52368c2b190 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:22-04:00]
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.028792
+X-Vcap-Request-Id: 5bac0deb-4e27-43ea-54d5-2056cc7d1e13::67caa387-e85b-4c54-ab8e-ddd81fbdcc7a
+X-Xss-Protection: 1; mode=block
+{
+  "pagination": {
+    "first": {
+      "href": "https://api.dev.cfdev.sh/v3/apps?names=dora&page=1&per_page=50&space_guids=2f732a38-8035-4696-a243-c52368c2b190"
+    },
+    "last": {
+      "href": "https://api.dev.cfdev.sh/v3/apps?names=dora&page=1&per_page=50&space_guids=2f732a38-8035-4696-a243-c52368c2b190"
+    },
+    "next": null,
+    "previous": null,
+    "total_pages": 1,
+    "total_results": 1
+  },
+  "resources": [
+    {
+      "created_at": "2019-07-22T08:22:49Z",
+      "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+      "lifecycle": {
+        "data": {
+          "buildpacks": null,
+          "stack": "cflinuxfs3"
+        },
+        "type": "buildpack"
+      },
+      "links": {
+        "current_droplet": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/droplets/current"
+        },
+        "deployed_revisions": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/revisions/deployed"
+        },
+        "droplets": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/droplets"
+        },
+        "environment_variables": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/environment_variables"
+        },
+        "packages": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/packages"
+        },
+        "processes": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/processes"
+        },
+        "revisions": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/revisions"
+        },
+        "route_mappings": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/route_mappings"
+        },
+        "self": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+        },
+        "space": {
+          "href": "https://api.dev.cfdev.sh/v3/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+        },
+        "start": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/actions/start",
+          "method": "POST"
+        },
+        "stop": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/actions/stop",
+          "method": "POST"
+        },
+        "tasks": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/tasks"
+        }
+      },
+      "metadata": {
+        "annotations": {},
+        "labels": {}
+      },
+      "name": "dora",
+      "relationships": {
+        "space": {
+          "data": {
+            "guid": "2f732a38-8035-4696-a243-c52368c2b190"
+          }
+        }
+      },
+      "state": "STARTED",
+      "updated_at": "2019-07-22T08:24:22Z"
+    }
+  ]
+}
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/processes HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:22-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1697
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.032179
+X-Vcap-Request-Id: f76f0248-4380-4d99-505c-2d3a832ea092::3f4e659b-3058-4fa4-838b-883146311ba9
+X-Xss-Protection: 1; mode=block
+{
+  "pagination": {
+    "first": {
+      "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/processes?page=1&per_page=50"
+    },
+    "last": {
+      "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/processes?page=1&per_page=50"
+    },
+    "next": null,
+    "previous": null,
+    "total_pages": 1,
+    "total_results": 1
+  },
+  "resources": [
+    {
+      "command": "[PRIVATE DATA HIDDEN IN LISTS]",
+      "created_at": "2019-07-22T08:22:49Z",
+      "disk_in_mb": 1024,
+      "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+      "health_check": {
+        "data": {
+          "invocation_timeout": null,
+          "timeout": null
+        },
+        "type": "port"
+      },
+      "instances": 1,
+      "links": {
+        "app": {
+          "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+        },
+        "scale": {
+          "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f/actions/scale",
+          "method": "POST"
+        },
+        "self": {
+          "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f"
+        },
+        "space": {
+          "href": "https://api.dev.cfdev.sh/v3/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+        },
+        "stats": {
+          "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f/stats"
+        }
+      },
+      "memory_in_mb": 256,
+      "metadata": {
+        "annotations": {},
+        "labels": {}
+      },
+      "relationships": {
+        "revision": null
+      },
+      "type": "web",
+      "updated_at": "2019-07-22T08:22:57Z"
+    }
+  ]
+}
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/processes/web HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:22-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1122
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.021367
+X-Vcap-Request-Id: 931c1097-1ebc-42f3-57cc-6d5e39227a7a::fff62216-10a6-4187-871f-588e240b7b23
+X-Xss-Protection: 1; mode=block
+{
+  "command": "bundle exec rackup config.ru -p $PORT",
+  "created_at": "2019-07-22T08:22:49Z",
+  "disk_in_mb": 1024,
+  "guid": "a0237768-e35b-4930-9e28-ff181f8d445f",
+  "health_check": {
+    "data": {
+      "invocation_timeout": null,
+      "timeout": null
+    },
+    "type": "port"
+  },
+  "instances": 1,
+  "links": {
+    "app": {
+      "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+    },
+    "scale": {
+      "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f/actions/scale",
+      "method": "POST"
+    },
+    "self": {
+      "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f"
+    },
+    "space": {
+      "href": "https://api.dev.cfdev.sh/v3/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+    },
+    "stats": {
+      "href": "https://api.dev.cfdev.sh/v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f/stats"
+    }
+  },
+  "memory_in_mb": 256,
+  "metadata": {
+    "annotations": {},
+    "labels": {}
+  },
+  "relationships": {
+    "revision": null
+  },
+  "type": "web",
+  "updated_at": "2019-07-22T08:22:57Z"
+}
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v3/processes/a0237768-e35b-4930-9e28-ff181f8d445f/stats HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:22-04:00]
+HTTP/1.1 200 OK
+Content-Length: 614
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.186572
+X-Vcap-Request-Id: 7adce283-f21c-41ab-6975-f18af9b8e230::4fa10750-d5e6-4e90-afce-6df043a9a3af
+X-Xss-Protection: 1; mode=block
+{
+  "resources": [
+    {
+      "details": null,
+      "disk_quota": 1073741824,
+      "fds_quota": 16384,
+      "host": "10.144.0.13",
+      "index": 0,
+      "instance_ports": [
+        {
+          "external": 61000,
+          "internal": 8080
+        },
+        {
+          "external": 61001,
+          "internal": 2222
+        }
+      ],
+      "isolation_segment": null,
+      "mem_quota": 268435456,
+      "state": "RUNNING",
+      "type": "web",
+      "uptime": 0,
+      "usage": {
+        "cpu": 0.0,
+        "disk": 8192,
+        "mem": 40960,
+        "time": "2019-07-22T08:24:31+00:00"
+      }
+    }
+  ]
+}
+
+
+REQUEST: [2019-07-24T22:53:22-04:00]
+GET /v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/droplets/current HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 1311
+Content-Type: application/json; charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:31 GMT
+Referrer-Policy: strict-origin-when-cross-origin
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-Permitted-Cross-Domain-Policies: none
+X-Runtime: 0.028334
+X-Vcap-Request-Id: e998b271-004e-4b59-52e6-6020ac6db9e9::29e7ef45-61d2-46cf-a9ec-52a55fe8608f
+X-Xss-Protection: 1; mode=block
+{
+  "buildpacks": [
+    {
+      "buildpack_name": "ruby",
+      "detect_output": "ruby",
+      "name": "ruby_buildpack",
+      "version": "1.7.34"
+    }
+  ],
+  "checksum": {
+    "type": "sha256",
+    "value": "813699ca801f967940db498e4bc6243f13e25dc9504098b66db0dc905d3274db"
+  },
+  "created_at": "2019-07-22T08:24:17Z",
+  "error": null,
+  "execution_metadata": "",
+  "guid": "99c34e14-3062-4e39-80c8-b6bc56dab494",
+  "image": null,
+  "lifecycle": {
+    "data": {},
+    "type": "buildpack"
+  },
+  "links": {
+    "app": {
+      "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f"
+    },
+    "assign_current_droplet": {
+      "href": "https://api.dev.cfdev.sh/v3/apps/a0237768-e35b-4930-9e28-ff181f8d445f/relationships/current_droplet",
+      "method": "PATCH"
+    },
+    "package": {
+      "href": "https://api.dev.cfdev.sh/v3/packages/18d998fe-b325-4e02-822d-51e627f173f6"
+    },
+    "self": {
+      "href": "https://api.dev.cfdev.sh/v3/droplets/99c34e14-3062-4e39-80c8-b6bc56dab494"
+    }
+  },
+  "metadata": {
+    "annotations": {},
+    "labels": {}
+  },
+  "process_types": {
+    "web": "bundle exec rackup config.ru -p $PORT",
+    "worker": "bundle exec rackup config.ru"
+  },
+  "stack": "cflinuxfs3",
+  "state": "STAGED",
+  "updated_at": "2019-07-22T08:24:22Z"
+}
+
+
+REQUEST: [2019-07-24T22:53:23-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/routes HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 940
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:32 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: bca26e45-d818-474d-4de1-fa395fb882fc::ba54bf7e-8269-4922-83b0-c0af24fe5646
+{
+  "next_url": null,
+  "prev_url": null,
+  "resources": [
+    {
+      "entity": {
+        "apps_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/apps",
+        "domain_guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+        "domain_url": "/v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+        "host": "dora",
+        "path": "",
+        "port": null,
+        "route_mappings_url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4/route_mappings",
+        "service_instance_guid": null,
+        "space_guid": "2f732a38-8035-4696-a243-c52368c2b190",
+        "space_url": "/v2/spaces/2f732a38-8035-4696-a243-c52368c2b190"
+      },
+      "metadata": {
+        "created_at": "2019-07-22T08:22:49Z",
+        "guid": "25c7141c-414a-4abf-b7b3-991fe28350a4",
+        "updated_at": "2019-07-22T08:22:49Z",
+        "url": "/v2/routes/25c7141c-414a-4abf-b7b3-991fe28350a4"
+      }
+    }
+  ],
+  "total_pages": 1,
+  "total_results": 1
+}
+
+
+REQUEST: [2019-07-24T22:53:23-04:00]
+GET /v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1 HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 359
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:32 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: cb234190-4b08-403b-6425-4642efed4d60::a7efac7a-0932-4372-b382-eb57d7df56a0
+{
+  "entity": {
+    "internal": false,
+    "name": "dev.cfdev.sh",
+    "router_group_guid": null,
+    "router_group_type": null
+  },
+  "metadata": {
+    "created_at": "2019-07-22T01:55:53Z",
+    "guid": "e737e4af-3c9d-4aa5-b692-acc3c5fd81e1",
+    "updated_at": "2019-07-22T01:55:53Z",
+    "url": "/v2/shared_domains/e737e4af-3c9d-4aa5-b692-acc3c5fd81e1"
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:23-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/stats HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 291
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:32 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 01010577-c89a-4aa9-448d-bee0ac60cd98::25b687ea-7f06-453e-b1cc-1be41960a9e3
+{
+  "0": {
+    "isolation_segment": null,
+    "state": "RUNNING",
+    "stats": {
+      "disk_quota": 1073741824,
+      "fds_quota": 16384,
+      "host": "10.144.0.13",
+      "mem_quota": 268435456,
+      "name": "dora",
+      "port": 61000,
+      "uptime": 1,
+      "uris": [
+        "dora.dev.cfdev.sh"
+      ],
+      "usage": {
+        "cpu": 0.0,
+        "disk": 8192,
+        "mem": 40960,
+        "time": "2019-07-22T08:24:32+00:00"
+      }
+    }
+  }
+}
+
+
+REQUEST: [2019-07-24T22:53:23-04:00]
+GET /v2/apps/a0237768-e35b-4930-9e28-ff181f8d445f/instances HTTP/1.1
+Host: api.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+User-Agent: cf/6.42.0+0cba12168.2019-01-10 (go1.11.4; amd64 darwin)
+
+RESPONSE: [2019-07-24T22:53:23-04:00]
+HTTP/1.1 200 OK
+Content-Length: 55
+Content-Type: application/json;charset=utf-8
+Date: Mon, 22 Jul 2019 08:24:32 GMT
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Vcap-Request-Id: 38c5cf2e-2a0e-4722-7ac9-def83711c321::19311435-73ac-4f6c-ab27-6f558304a42f
+{
+  "0": {
+    "since": 1563783870,
+    "state": "RUNNING",
+    "uptime": 1
+  }
+}
+
+
+name:              dora
+requested state:   started
+routes:            dora.dev.cfdev.sh
+last uploaded:     Mon 22 Jul 04:24:17 EDT 2019
+stack:             cflinuxfs3
+buildpacks:        ruby
+
+type:            web
+instances:       1/1
+memory usage:    256M
+start command:   bundle exec rackup config.ru -p $PORT
+     state     since                  cpu    memory        disk       details
+#0   running   2019-07-25T02:53:23Z   0.0%   40K of 256M   8K of 1G

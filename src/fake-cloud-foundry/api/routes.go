@@ -5,5 +5,7 @@ import "github.com/julienschmidt/httprouter"
 func (a *API) Router() *httprouter.Router {
 	router := httprouter.New()
 	router.GET("/v2/info", a.Info)
+	router.GET("/v2/organizations", a.Orgs)
+	router.GET("/v2/organizations/:guid/spaces", a.OrgSpaces)
 	return router
 }

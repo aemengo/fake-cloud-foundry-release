@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/aemengo/fake-cloud-foundry/api"
 	cfg "github.com/aemengo/fake-cloud-foundry/config"
+	"github.com/aemengo/fake-cloud-foundry/db"
 	"github.com/aemengo/fake-cloud-foundry/uaa"
 	"log"
 	"net/http"
@@ -22,7 +23,8 @@ func main() {
 	expectNoError(err)
 
 	var (
-		apiServer = api.New(config)
+		database  = db.New(config)
+		apiServer = api.New(config, database)
 		uaaServer = uaa.New(config)
 		sigs      = make(chan os.Signal, 1)
 	)

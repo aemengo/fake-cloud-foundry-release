@@ -41,10 +41,10 @@ func (a *API) Info(w http.ResponseWriter, r *http.Request, _ httprouter.Params) 
 		"min_cli_version":              nil,
 		"min_recommended_cli_version":  nil,
 		"app_ssh_endpoint":             fmt.Sprintf("ssh.%s:2222", a.config.Domain),
-		"app_ssh_host_key_fingerprint": "96:4d:89:2d:39:18:bc:16:e1:d3:d8:44:f8:16:af:85",
+		"app_ssh_host_key_fingerprint": "",
 		"app_ssh_oauth_client":         "ssh-proxy",
 		"doppler_logging_endpoint":     fmt.Sprintf("wss://doppler.%s:443", a.config.Domain),
-		"api_version":                  "2.133.0",
+		"api_version":                  "999.999.999",
 		"osbapi_version":               "2.14",
 		"routing_endpoint":             fmt.Sprintf("http://api.%s/routing", a.config.Domain), //<-- might change that to something different entirely
 	}

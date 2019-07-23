@@ -1,2 +1,9 @@
 ---
 domain: my.fakecf.io
+
+orgs:
+- name: system
+
+spaces:
+- name: system
+  org: system
