@@ -5,7 +5,9 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
-type Config struct {}
+type Config struct {
+	Domain string `json:"domain"`
+}
 
 func New(path string) (Config, error) {
 	content, err := ioutil.ReadFile(path)
