@@ -17,9 +17,19 @@ import (
 //   "jti":"200b44ad1505413b96d56baeafde8903"
 // }
 
-func (u *UAA) Token(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+func (u *UAA) Token(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	r.ParseForm()
+
+	username := r.PostFormValue("username")
+	password := r.PostFormValue("password")
+	user, ok := u.database.GetUserByNameAndPassword(username, password)
+	if !ok {
+		http.Error(w, `{"error":"unauthorized","error_description":"Bad credentials"}`, http.StatusUnauthorized)
+		return
+	}
+
 	info := map[string]interface{}{
-		"access_token": "access-token",
+		"access_token": user.Token,
 		"token_type": "",
 		"id_token": "id-token",
 		"refresh_token": "refresh-token",
@@ -30,5 +40,3 @@ func (u *UAA) Token(w http.ResponseWriter, r *http.Request, _ httprouter.Params)
 
 	json.NewEncoder(w).Encode(info)
 }
-
-

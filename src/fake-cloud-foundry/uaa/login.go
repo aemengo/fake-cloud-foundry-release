@@ -35,13 +35,13 @@ func (u *UAA) Login(w http.ResponseWriter, r *http.Request, _ httprouter.Params)
 			"version": "0",
 		},
 		"links": map[string]interface{}{
-			"uaa": fmt.Sprintf("http://uaa.%s", u.config.Domain),
+			"uaa": fmt.Sprintf("http://uaa.%s", u.config.Domain()),
 			"passwd": "/forgot_password",
-			"login": fmt.Sprintf("http://uaa.%s", u.config.Domain),
+			"login": fmt.Sprintf("http://uaa.%s", u.config.Domain()),
 			"register": "/create_account",
 		},
 		"zone_name": "uaa",
-		"entityID": fmt.Sprintf("uaa.%s", u.config.Domain),
+		"entityID": fmt.Sprintf("uaa.%s", u.config.Domain()),
 		"commit_id": "0",
 		"idpDefinitions": map[string]interface{}{},
 		"prompts": map[string]interface{}{

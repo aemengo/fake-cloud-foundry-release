@@ -6,8 +6,12 @@ import (
 )
 
 type Config struct {
-	Host string `json:"host"`
-	Port string `json:"port"`
+	Host  string `json:"host"`
+	Port  string `json:"port"`
+	Users []struct {
+		Name     string `json:"name"`
+		Password string `json:"password"`
+	} `json:"users"`
 	Orgs []struct {
 		Name string `json:"name"`
 	} `json:"orgs"`

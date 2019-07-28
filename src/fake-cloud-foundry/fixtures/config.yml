@@ -2,6 +2,10 @@
 host: my.blt.io
 port: 8080
 
+users:
+- name: admin
+  password: admin
+
 orgs:
 - name: system
 
