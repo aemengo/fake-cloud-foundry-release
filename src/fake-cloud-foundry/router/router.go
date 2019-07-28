@@ -20,7 +20,7 @@ func New() *Router {
 }
 
 func (r *Router) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	r.logger.Printf("Receiving request for %s%s...\n", req.Host, req.URL.Path)
+	r.logger.Printf("Receiving [%s] request for %s%s...\n", req.Method, req.Host, req.URL.Path)
 
 	handler, ok := r.handlers[req.Host]
 	if !ok {

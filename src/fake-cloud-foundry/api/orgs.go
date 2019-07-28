@@ -6,6 +6,7 @@ import (
 	"github.com/aemengo/fake-cloud-foundry/db"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
+	"time"
 )
 
 //{
@@ -67,32 +68,16 @@ import (
 //]
 //}
 
-type Org struct {
-	Name                        string  `json:"name"`
-	BillingEnabled              bool    `json:"billing_enabled"`
-	QuotaDefinitionGuid         string  `json:"quota_definition_guid"`
-	Status                      string  `json:"status"`
-	DefaultIsolationSegmentGuid *string `json:"default_isolation_segment_guid"`
-	QuotaDefinitionURL          string  `json:"quota_definition_url"`
-	SpacesURL                   string  `json:"spaces_url"`
-	DomainsURL                  string  `json:"domains_url"`
-	PrivateDomainsURL           string  `json:"private_domains_url"`
-	UsersURL                    string  `json:"users_url"`
-	ManagersURL                 string  `json:"managers_url"`
-	BillingManagersURL          string  `json:"billing_managers_url"`
-	AuditorsURL                 string  `json:"auditors_url"`
-	AppEventsURL                string  `json:"app_events_url"`
-	SpaceQuotaDefinitionsURL    string  `json:"space_quota_definitions_url"`
-}
-
 func (a *API) Orgs(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	var resources []Resource
 
 	for _, org := range a.database.GetOrgs() {
 		resources = append(resources, Resource{
 			Metadata: Metadata{
-				Guid: org.Guid,
-				URL:  fmt.Sprintf("/v2/organizations/%s", org.Guid),
+				Guid:      org.Guid,
+				URL:       fmt.Sprintf("/v2/organizations/%s", org.Guid),
+				CreatedAt: org.CreatedAt.Format(time.RFC3339),
+				UpdatedAt: org.UpdatedAt.Format(time.RFC3339),
 			},
 			Entity: presentOrg(org),
 		})

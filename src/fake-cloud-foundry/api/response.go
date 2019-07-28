@@ -2,7 +2,6 @@ package api
 
 import (
 	"strconv"
-	"time"
 )
 
 type Response struct {
@@ -11,6 +10,26 @@ type Response struct {
 	PrevURL      *string    `json:"prev_url"`
 	NextURL      *string    `json:"next_url"`
 	Resources    []Resource `json:"resources"`
+}
+
+type V3Response struct {
+	Pagination Pagination   `json:"pagination"`
+	Resources  []V3Resource `json:"resources"`
+}
+
+type V3Resource map[string]interface{}
+
+type Pagination struct {
+	First        Link    `json:"first"`
+	Last         Link    `json:"first"`
+	Next         *string `json:"next"`
+	Previous     *string `json:"previous"`
+	TotalPages   int     `json:"total_pages"`
+	TotalResults int     `json:"total_results"`
+}
+
+type Link struct {
+	Href string `json:"href"`
 }
 
 type Resource struct {
@@ -22,22 +41,31 @@ type Metadata struct {
 	Guid      string `json:"guid"`
 	URL       string `json:"url"`
 	CreatedAt string `json:"created_at"`
-	UpdatedAt string `json:"updated_at"`
+	UpdatedAt string `json:"updated_at,omitempty"`
 }
 
 func newResponse(resources []Resource) Response {
-	now := time.Now().Format(time.RFC3339)
-
-	for _, resource := range resources {
-		resource.Metadata.CreatedAt = now
-		resource.Metadata.UpdatedAt = now
-	}
-
 	return Response{
 		TotalResults: strconv.Itoa(len(resources)),
 		TotalPages:   "1",
 		PrevURL:      nil,
 		NextURL:      nil,
 		Resources:    resources,
+	}
+}
+
+func newV3Response(resources []V3Resource, path string) V3Response {
+	return V3Response{
+		Pagination: Pagination{
+			First: Link{
+				Href: path,
+			},
+			Last: Link{
+				Href: path,
+			},
+			TotalPages:   1,
+			TotalResults: 1,
+		},
+		Resources: resources,
 	}
 }

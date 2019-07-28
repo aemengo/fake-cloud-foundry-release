@@ -5,10 +5,14 @@ import (
 )
 
 type DB struct {
-	config cfg.Config
-	users  []User
-	orgs   []Org
-	spaces []Space
+	config        cfg.Config
+	users         []User
+	orgs          []Org
+	spaces        []Space
+	apps          []App
+	sharedDomains []SharedDomain
+	routes        []Route
+	jobs          []Job
 }
 
 func New(config cfg.Config) *DB {
@@ -24,4 +28,5 @@ func (db *DB) load() {
 	db.loadUsers()
 	db.loadOrgs()
 	db.loadSpaces()
+	db.loadSharedDomains()
 }

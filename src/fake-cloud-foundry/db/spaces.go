@@ -1,6 +1,9 @@
 package db
 
-import "github.com/satori/go.uuid"
+import (
+	"github.com/satori/go.uuid"
+	"time"
+)
 
 type Space struct {
 	Guid                     string
@@ -9,10 +12,13 @@ type Space struct {
 	SpaceQuotaDefinitionGuid *string
 	IsolationSegmentGuid     *string
 	AllowSSH                 bool
+	CreatedAt                time.Time
+	UpdatedAt                time.Time
 }
 
 func (db *DB) loadSpaces() {
 	for _, space := range db.config.Spaces {
+		now := time.Now().UTC()
 		org, _ := db.GetOrgByName(space.Org)
 
 		db.spaces = append(db.spaces, Space{
@@ -22,6 +28,8 @@ func (db *DB) loadSpaces() {
 			SpaceQuotaDefinitionGuid: nil,
 			IsolationSegmentGuid:     nil,
 			AllowSSH:                 false,
+			CreatedAt:                now,
+			UpdatedAt:                now,
 		})
 	}
 }

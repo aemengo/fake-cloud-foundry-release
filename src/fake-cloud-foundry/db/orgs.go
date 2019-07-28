@@ -1,6 +1,9 @@
 package db
 
-import "github.com/satori/go.uuid"
+import (
+	"github.com/satori/go.uuid"
+	"time"
+)
 
 type Org struct {
 	Guid                        string
@@ -9,6 +12,8 @@ type Org struct {
 	QuotaDefinitionGuid         string
 	Status                      string
 	DefaultIsolationSegmentGuid *string
+	CreatedAt                   time.Time
+	UpdatedAt                   time.Time
 }
 
 func (db *DB) loadOrgs() {
@@ -20,6 +25,8 @@ func (db *DB) loadOrgs() {
 			QuotaDefinitionGuid:         "",
 			Status:                      "active",
 			DefaultIsolationSegmentGuid: nil,
+			CreatedAt:                   time.Now().UTC(),
+			UpdatedAt:                   time.Now().UTC(),
 		})
 	}
 }
