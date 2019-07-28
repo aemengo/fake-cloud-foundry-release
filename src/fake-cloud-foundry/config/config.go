@@ -6,8 +6,9 @@ import (
 )
 
 type Config struct {
-	Domain string `json:"domain"`
-	Orgs   []struct {
+	Host string `json:"host"`
+	Port string `json:"port"`
+	Orgs []struct {
 		Name string `json:"name"`
 	} `json:"orgs"`
 	Spaces []struct {
@@ -29,4 +30,8 @@ func New(path string) (Config, error) {
 	}
 
 	return config, nil
+}
+
+func (c *Config) Domain() string {
+	return c.Host + ":" + c.Port
 }

@@ -1,5 +1,6 @@
 ---
-domain: my.fakecf.io
+host: my.blt.io
+port: 8080
 
 orgs:
 - name: system

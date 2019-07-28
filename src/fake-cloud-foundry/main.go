@@ -1,15 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"github.com/aemengo/fake-cloud-foundry/api"
 	cfg "github.com/aemengo/fake-cloud-foundry/config"
 	"github.com/aemengo/fake-cloud-foundry/db"
+	"github.com/aemengo/fake-cloud-foundry/router"
 	"github.com/aemengo/fake-cloud-foundry/uaa"
 	"log"
 	"net/http"
 	"os"
-	"os/signal"
-	"syscall"
 )
 
 func main() {
@@ -23,23 +23,17 @@ func main() {
 	expectNoError(err)
 
 	var (
-		database  = db.New(config)
-		apiServer = api.New(config, database)
-		uaaServer = uaa.New(config)
-		sigs      = make(chan os.Signal, 1)
+		routerSwitch = router.New()
+		database     = db.New(config)
+		apiServer    = api.New(config, database)
+		uaaServer    = uaa.New(config)
 	)
 
-	signal.Notify(sigs, syscall.SIGINT, syscall.SIGTERM)
+	routerSwitch.Add(fmt.Sprintf("api.%s", config.Domain()), apiServer.Router())
+	routerSwitch.Add(fmt.Sprintf("uaa.%s", config.Domain()), uaaServer.Router())
 
-	go launchServer("api", "8080", apiServer.Router(), logger)
-	go launchServer("uaa", "8081", uaaServer.Router(), logger)
-
-	<-sigs
-}
-
-func launchServer(name string, port string, handler http.Handler, logger *log.Logger) {
-	logger.Printf("Launching %s server on :%s...\n", name, port)
-	expectNoError(http.ListenAndServe(":"+port, handler))
+	logger.Printf("Launching server on :%s...\n", config.Port)
+	expectNoError(http.ListenAndServe(":"+config.Port, routerSwitch))
 }
 
 func expectNoError(err error) {

@@ -1,0 +1,26 @@
+REQUEST: [2019-07-28T00:03:04-04:00]
+POST /oauth/token HTTP/1.1
+Host: login.dev.cfdev.sh
+Accept: application/json
+Authorization: [PRIVATE DATA HIDDEN]
+Content-Type: application/x-www-form-urlencoded
+User-Agent: go-cli 6.42.0+0cba12168.2019-01-10 / darwin
+
+grant_type=password&password=[PRIVATE DATA HIDDEN]&scope=&username=admin
+
+RESPONSE: [2019-07-28T00:03:04-04:00]
+HTTP/1.1 401 Unauthorized
+Connection: close
+Content-Length: 62
+Cache-Control: no-store
+Content-Type: application/json;charset=UTF-8
+Date: Mon, 22 Jul 2019 16:05:59 GMT
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+Www-Authenticate: Basic realm="UAA/client", error="unauthorized", error_description="Bad credentials"
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Vcap-Request-Id: 3ee621c7-dfc3-4dbc-7d5e-9c0ed80b6da3
+X-Xss-Protection: 1; mode=block
+
+{"error":"unauthorized","error_description":"Bad credentials"}
